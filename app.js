@@ -1,10 +1,13 @@
+function sayHello(){
+  return "Hello, there Cutie pie! One of us is in deep trouble."
+}
+
+function addNumbers(num1, num2){
+  return num1 + num2;
+}
+
+
 module.exports = {
-  sayHello: function(){
-    return 'Hello';
-  },
-  addNumbers: function(val1, val2){
-    // debugger;
-    // While in debugger mode, hit c to run to first instance of debugger, then type 'repl' to enter a repl session where all variables are available.
-    return val1 + val2;
-  }
+  sayHello: sayHello,
+  addNumbers: addNumbers
 }

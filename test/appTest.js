@@ -5,7 +5,7 @@ const addNums  = require('../app').addNumbers;
 describe('App', function(){
   it('app should return hello', function(){
     var result = sayHello();
-    assert.equal(result, 'Hello');
+    assert.equal(result, 'Hello, there Cutie pie! One of us is in deep trouble.');
   })
 
   it('app should return a string', function(){
