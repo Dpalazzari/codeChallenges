@@ -7,12 +7,20 @@ function addNumbers(num1, num2){
 }
 
 function fizzBuzz(number){
-  if( number % 3 === 0 ){
-    return 'Fizz'
-  } else if ( number % 5 === 0 ){
-    return 'Buzz'
-  } else if ( number % 7 === 0 ){
-    return 'Super'
+  var superFizzBuzz = "";
+  if ( number % 7 === 0 ){
+    var superFizzBuzz = superFizzBuzz + 'Super'
+  }
+  if ( number % 3 === 0 ){
+    var superFizzBuzz = superFizzBuzz + 'Fizz'
+  }
+  if ( number % 5 === 0 ){
+    var superFizzBuzz = superFizzBuzz + 'Buzz'
+  }
+  if ( number % 3 !== 0 && number % 5 !== 0 && number % 7 !== 0){
+    return number
+  } else {
+    return superFizzBuzz
   }
 }
 
