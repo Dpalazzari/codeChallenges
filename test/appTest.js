@@ -99,7 +99,7 @@ describe('App', function(){
       assert.typeOf(result, 'array')
     })
 
-    it('flattens an insanely complex array', function(){
+    it('flattens a very complex array', function(){
       var array = [2, [1, 3, [4, 5]], 6, [7, [8, [9, 10]]]]
       var result = flatten(array)
       assert.deepEqual(result, [2, 1, 3, 4, 5, 6, 7, 8, 9, 10])
