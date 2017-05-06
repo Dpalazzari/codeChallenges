@@ -24,9 +24,20 @@ function fizzBuzz(number){
   }
 }
 
+function flattenArray(arr){
+  var nestedArrays   = [].concat.apply([], arr)
+  for(i = 0; i < nestedArrays.length; i++){
+    if(nestedArrays[i].length){
+      var nestedArrays = flattenArray(nestedArrays)
+    }
+  }
+  return nestedArrays
+}
+
 
 module.exports = {
   sayHello: sayHello,
   addNumbers: addNumbers,
-  fizzBuzz: fizzBuzz
+  fizzBuzz: fizzBuzz,
+  flatten: flattenArray
 }
