@@ -26,8 +26,7 @@ function fizzBuzz(number){
 
 function flattenArray(arr){
   var flattenedArray = [].concat.apply([], arr);
-  debugger;
-  return flattenedArray
+  return [].concat.apply([], flattenedArray)
 }
 
 

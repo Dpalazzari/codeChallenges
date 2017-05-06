@@ -93,6 +93,11 @@ describe('App', function(){
       assert.typeOf(result, 'array')
     })
 
-    
+    it('flattens a more complex array', function(){
+      var array = [2, [1, 3, [4, 5]]]
+      var result = flatten(array)
+      assert.deepEqual(result, [2, 1, 3, 4, 5])
+      assert.typeOf(result, 'array')
+    })
   })
 });
