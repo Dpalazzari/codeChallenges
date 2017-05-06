@@ -12,3 +12,4 @@ A series of javascript challenges practicing both raw JavaScript ability and uni
 
   - [SuperFizzBuzz](http://backend.turing.io/module1/student_homework/super_fizz)
   - [Flatten](https://github.com/turingschool/challenges/blob/master/flatten.markdown)
+  - [Collections](https://github.com/turingschool/challenges/blob/master/collections.markdown)
