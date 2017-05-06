@@ -1,12 +1,14 @@
 require 'pry-state'
+require './lib/scrabble'
 
 class Collections
 
-  attr_reader :states, :capitals
+  attr_reader :states, :capitals, :library
 
   def initialize
     @states   = {"Oregon" => "OR", "Alabama" => "AL", "New Jersey" => "NJ", "Colorado" => "CO"}
     @capitals = {"OR" => "Salem", "AL" => "Montgomery", "NJ" => "Trenton", "CO" => "Denver"}
+    @library  = Scrabble.new.library
   end
 
   def ascending_age(data)
@@ -43,6 +45,11 @@ class Collections
     capitals.map do |key, value|
       key if value.eql?(capital)
     end.compact.join
+  end
+
+  def score_word(word)
+    letters = word.upcase.split(//)
+    letters.inject(0) { |score, letter| score += library[letter] }
   end
 
 end

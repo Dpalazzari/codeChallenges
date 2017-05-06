@@ -2,19 +2,22 @@ require 'pry-state'
 require 'minitest/autorun'
 require 'minitest/emoji'
 require './lib/collections'
+require './lib/scrabble'
 
 class CollectionsTest < Minitest::Test
 
   def setup
-    @coll = Collections.new
+    @coll     = Collections.new
+    @scrabble = Scrabble.new
   end
 
-  def test_it_exists
+  def test_they_exist
     assert @coll
+    assert @scrabble
   end
 
   def test_it_initializes_with_states
-    result = @coll.states
+    result    = @coll.states
     assert_equal Hash, result.class
     assert_equal "OR", result["Oregon"]
     hash_keys = ["Oregon", "Alabama", "New Jersey", "Colorado"]
@@ -22,11 +25,23 @@ class CollectionsTest < Minitest::Test
   end
 
   def test_it_initializes_with_capitals
-    result = @coll.capitals
+    result    = @coll.capitals
     assert_equal Hash, result.class
     assert_equal "Salem", result["OR"]
     hash_keys = ["OR", "AL", "NJ", "CO"]
     assert_equal hash_keys, result.keys
+  end
+
+  def test_it_initializes_with_a_scrabble_library
+    result = @coll.library
+    assert_equal Hash, result.class
+    assert_equal 26, result.keys.count
+  end
+
+  def test_scrabble_has_scoring_library
+    result = @scrabble.library
+    assert_equal Hash, result.class
+    assert_equal 26, result.keys.count
   end
 
   def test_it_outputs_names_by_ascending_age
@@ -60,21 +75,33 @@ class CollectionsTest < Minitest::Test
   end
 
   def test_collections_can_find_the_capital_when_given_a_state
-    state = 'Colorado'
+    state  = 'Colorado'
     result = @coll.find_capital_by_state(state)
     assert_equal 'Denver', result
   end
 
   def test_it_returns_unknown_for_states_that_are_not_in_the_hash
-    state = 'Minnesota'
+    state  = 'Minnesota'
     result = @coll.find_capital_by_state(state)
     assert_equal 'Unknown', result
   end
 
   def test_it_can_return_the_state_when_given_the_capital
     capital = 'Denver'
-    result = @coll.find_state_by_capital(capital)
+    result  = @coll.find_state_by_capital(capital)
     assert_equal 'Colorado', result
+  end
+
+  def test_it_can_score_single_letters_in_scrabble
+    letter = 'H'
+    result = @coll.score_word(letter)
+    assert_equal 4, result
+  end
+
+  def test_it_can_score_a_whole_word_in_Scrabble
+    word   = 'Hello'
+    result = @coll.score_word(word)
+    assert_equal 8, result
   end
 
 end
