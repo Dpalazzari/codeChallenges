@@ -13,6 +13,22 @@ class CollectionsTest < Minitest::Test
     assert @coll
   end
 
+  def test_it_initializes_with_states
+    result = @coll.states
+    assert_equal Hash, result.class
+    assert_equal "OR", result["Oregon"]
+    hash_keys = ["Oregon", "Alabama", "New Jersey", "Colorado"]
+    assert_equal hash_keys, result.keys
+  end
+
+  def test_it_initializes_with_capitals
+    result = @coll.capitals
+    assert_equal Hash, result.class
+    assert_equal "Salem", result["OR"]
+    hash_keys = ["OR", "AL", "NJ", "CO"]
+    assert_equal hash_keys, result.keys
+  end
+
   def test_it_outputs_names_by_ascending_age
     data   = [['Frank', 33], ['Stacy', 15], ['Juan', 24], ['Dom', 32], ['Steve', 24], ['Jill', 24]]
     result = @coll.ascending_age(data)
@@ -41,6 +57,24 @@ class CollectionsTest < Minitest::Test
     result = @coll.build_ascending_ages(data, age)
     answer = %w(Juan Steve Jill)
     assert_equal answer, result
+  end
+
+  def test_collections_can_find_the_capital_when_given_a_state
+    state = 'Colorado'
+    result = @coll.find_capital_by_state(state)
+    assert_equal 'Denver', result
+  end
+
+  def test_it_returns_unknown_for_states_that_are_not_in_the_hash
+    state = 'Minnesota'
+    result = @coll.find_capital_by_state(state)
+    assert_equal 'Unknown', result
+  end
+
+  def test_it_can_return_the_state_when_given_the_capital
+    capital = 'Denver'
+    result = @coll.find_state_by_capital(capital)
+    assert_equal 'Colorado', result
   end
 
 end
