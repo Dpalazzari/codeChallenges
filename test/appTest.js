@@ -85,7 +85,6 @@ describe('App', function(){
   })
 
   context('flatten', function(){
-
     it('flattens a simple nested array', function(){
       var array = [2, [1, 3]]
       var result = flatten(array)
@@ -97,6 +96,13 @@ describe('App', function(){
       var array = [2, [1, 3, [4, 5]]]
       var result = flatten(array)
       assert.deepEqual(result, [2, 1, 3, 4, 5])
+      assert.typeOf(result, 'array')
+    })
+
+    it('flattens an insanely complex array', function(){
+      var array = [2, [1, 3, [4, 5]], 6, [7, [8, [9, 10]]]]
+      var result = flatten(array)
+      assert.deepEqual(result, [2, 1, 3, 4, 5, 6, 7, 8, 9, 10])
       assert.typeOf(result, 'array')
     })
   })

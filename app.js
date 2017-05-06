@@ -26,7 +26,13 @@ function fizzBuzz(number){
 
 function flattenArray(arr){
   var flattenedArray = [].concat.apply([], arr);
-  return [].concat.apply([], flattenedArray)
+  var nestedArrays   = [].concat.apply([], flattenedArray)
+  for(i = 0; i < nestedArrays.length; i++){
+    if(nestedArrays[i].length){
+      var nestedArrays = [].concat.apply([], nestedArrays)
+    }
+  }
+  return nestedArrays
 }
 
 
