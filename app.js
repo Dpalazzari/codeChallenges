@@ -1,3 +1,6 @@
+const flattenArray = require('./javascriptChallenges/flattenArray');
+const fizzBuzz     = require('./javascriptChallenges/fizzBuzz');
+
 function sayHello(){
   return "Hello, there Cutie pie! One of us is in deep trouble."
 }
@@ -5,35 +8,6 @@ function sayHello(){
 function addNumbers(num1, num2){
   return num1 + num2;
 }
-
-function fizzBuzz(number){
-  var superFizzBuzz = "";
-  if ( number % 7 === 0 ){
-    var superFizzBuzz = superFizzBuzz + 'Super'
-  }
-  if ( number % 3 === 0 ){
-    var superFizzBuzz = superFizzBuzz + 'Fizz'
-  }
-  if ( number % 5 === 0 ){
-    var superFizzBuzz = superFizzBuzz + 'Buzz'
-  }
-  if ( number % 3 !== 0 && number % 5 !== 0 && number % 7 !== 0){
-    return number
-  } else {
-    return superFizzBuzz
-  }
-}
-
-function flattenArray(arr){
-  var nestedArrays   = [].concat.apply([], arr)
-  for(i = 0; i < nestedArrays.length; i++){
-    if(nestedArrays[i].length){
-      var nestedArrays = flattenArray(nestedArrays)
-    }
-  }
-  return nestedArrays
-}
-
 
 module.exports = {
   sayHello: sayHello,
