@@ -2,6 +2,7 @@ const flattenArray = require('./javascriptChallenges/flattenArray');
 const fizzBuzz     = require('./javascriptChallenges/fizzBuzz');
 const findCapital  = require('./javascriptChallenges/collections').findCapital
 const findState    = require('./javascriptChallenges/collections').findState
+const scrabble    = require('./javascriptChallenges/collections').scrabble
 
 function sayHello(){
   return "Hello, there Cutie pie! One of us is in deep trouble."
@@ -17,5 +18,6 @@ module.exports = {
   fizzBuzz: fizzBuzz,
   flatten: flattenArray,
   findCapital: findCapital,
-  findState: findState
+  findState: findState,
+  scrabble: scrabble
 }
