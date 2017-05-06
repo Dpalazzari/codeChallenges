@@ -2,6 +2,7 @@ const assert    = require('chai').assert;
 const sayHello  = require('../app').sayHello;
 const addNums   = require('../app').addNumbers;
 const fizzBuzz  = require('../app').fizzBuzz;
+const flatten   = require('../app').flatten;
 
 
 describe('App', function(){
@@ -81,5 +82,17 @@ describe('App', function(){
       assert.equal(result, 1)
       assert.typeOf(result, 'number')
     })
+  })
+
+  context('flatten', function(){
+
+    it('flattens a simple nested array', function(){
+      var array = [2, [1, 3]]
+      var result = flatten(array)
+      assert.deepEqual(result, [2, 1, 3])
+      assert.typeOf(result, 'array')
+    })
+
+    
   })
 });

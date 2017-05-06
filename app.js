@@ -24,9 +24,16 @@ function fizzBuzz(number){
   }
 }
 
+function flattenArray(arr){
+  var flattenedArray = [].concat.apply([], arr);
+  debugger;
+  return flattenedArray
+}
+
 
 module.exports = {
   sayHello: sayHello,
   addNumbers: addNumbers,
-  fizzBuzz: fizzBuzz
+  fizzBuzz: fizzBuzz,
+  flatten: flattenArray
 }
