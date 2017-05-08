@@ -13,3 +13,4 @@
   - [SuperFizzBuzz](http://backend.turing.io/module1/student_homework/super_fizz)
   - [Flatten](https://github.com/turingschool/challenges/blob/master/flatten.markdown)
   - [Collections](https://github.com/turingschool/challenges/blob/master/collections.markdown)
+  - [Fibonacci](https://github.com/turingschool/challenges/blob/master/fibber.markdown)
