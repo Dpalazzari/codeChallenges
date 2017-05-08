@@ -14,3 +14,7 @@
   - [Flatten](https://github.com/turingschool/challenges/blob/master/flatten.markdown)
   - [Collections](https://github.com/turingschool/challenges/blob/master/collections.markdown)
   - [Fibonacci](https://github.com/turingschool/challenges/blob/master/fibber.markdown)
+
+## Future
+
+- Add all challenges in Python, with unit testing.
