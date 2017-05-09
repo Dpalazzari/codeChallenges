@@ -15,3 +15,7 @@
   - [Collections](https://github.com/turingschool/challenges/blob/master/collections.markdown)
   - [Fibonacci](https://github.com/turingschool/challenges/blob/master/fibber.markdown)
   - [Basic Stack](https://github.com/turingschool/challenges/blob/master/basic_stack.markdown)
+
+## Future
+
+- Add all challenges in Python, with unit testing.
