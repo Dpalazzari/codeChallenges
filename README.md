@@ -14,6 +14,7 @@
   - [Flatten](https://github.com/turingschool/challenges/blob/master/flatten.markdown)
   - [Collections](https://github.com/turingschool/challenges/blob/master/collections.markdown)
   - [Fibonacci](https://github.com/turingschool/challenges/blob/master/fibber.markdown)
+  - [Basic Stack](https://github.com/turingschool/challenges/blob/master/basic_stack.markdown)
 
 ## Future
 
