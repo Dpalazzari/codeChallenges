@@ -15,6 +15,32 @@
   - [Collections](https://github.com/turingschool/challenges/blob/master/collections.markdown)
   - [Fibonacci](https://github.com/turingschool/challenges/blob/master/fibber.markdown)
   - [Basic Stack](https://github.com/turingschool/challenges/blob/master/basic_stack.markdown)
+  
+## Set-up
+
+- To run JavaScript unit tests from the root directory:
+
+```
+npm install
+```
+```
+npm run test
+```
+- To run tests with a debugger:
+```
+npm run debug
+```
+
+- To run all Ruby tests:
+```
+cd Ruby/
+```
+```
+bundle
+```
+```
+rake
+```
 
 ## Future
 
