@@ -4,6 +4,10 @@ const findCapital  = require('./javascriptChallenges/collections').findCapital
 const findState    = require('./javascriptChallenges/collections').findState
 const scrabble     = require('./javascriptChallenges/collections').scrabble
 const fibonacci    = require('./javascriptChallenges/fibonacci');
+const removeElement = require('./javascriptChallenges/basicStack').removeElement;
+const countElement = require('./javascriptChallenges/basicStack').countElement;
+const pushElement  = require('./javascriptChallenges/basicStack').pushElement;
+const maxElement   = require('./javascriptChallenges/basicStack').maxElement;
 
 function sayHello(){
   return "Hello, there Cutie pie! One of us is in deep trouble."
@@ -21,5 +25,9 @@ module.exports = {
   findCapital: findCapital,
   findState: findState,
   scrabble: scrabble,
-  fibonacci: fibonacci
+  fibonacci: fibonacci,
+  removeElement: removeElement,
+  countElement: countElement,
+  pushElement: pushElement,
+  maxElement: maxElement
 }
