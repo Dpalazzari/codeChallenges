@@ -15,6 +15,7 @@
   - [Collections](https://github.com/turingschool/challenges/blob/master/collections.markdown)
   - [Fibonacci](https://github.com/turingschool/challenges/blob/master/fibber.markdown)
   - [Basic Stack](https://github.com/turingschool/challenges/blob/master/basic_stack.markdown)
+  - [Stock Prices](https://gist.github.com/Dpalazzari/3cbb2f16a27759ceb662f5b2b7a0dc1c)
   
 ## Set-up
 
