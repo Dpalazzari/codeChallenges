@@ -8,6 +8,7 @@ const removeElement = require('./javascriptChallenges/basicStack').removeElement
 const countElement = require('./javascriptChallenges/basicStack').countElement;
 const pushElement  = require('./javascriptChallenges/basicStack').pushElement;
 const maxElement   = require('./javascriptChallenges/basicStack').maxElement;
+const stockPrices  = require('./javascriptChallenges/stockPrices');
 
 function sayHello(){
   return "Hello, there Cutie pie! One of us is in deep trouble."
@@ -29,5 +30,6 @@ module.exports = {
   removeElement: removeElement,
   countElement: countElement,
   pushElement: pushElement,
-  maxElement: maxElement
+  maxElement: maxElement,
+  stockPrices: stockPrices
 }
