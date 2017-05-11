@@ -7,16 +7,18 @@ class StockPrices
     return get_greatest_gain(arr, arr.min)
   end
 
-  def get_greatest_gain(arr, minimum, gains = [])
+  def get_greatest_gain(arr, minimum)
     arr.each_with_index do |num, index|
-      if num == minimum
-        until (index + 1 >= arr.length)
-          gains.push(arr[index + 1])
-          index += 1
-        end
-        return gains.max - minimum
-      end
+      return find_gains(arr, index, minimum) if num == minimum
     end
+  end
+
+  def find_gains(arr, index, minimum, gains = [])
+    until (index + 1 >= arr.length)
+      gains.push(arr[index + 1])
+      index += 1
+    end
+    gains.max - minimum
   end
 
   def get_smallest_loss(arr, gains = [])
