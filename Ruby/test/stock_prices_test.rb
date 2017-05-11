@@ -24,6 +24,12 @@ class StockPricesTest < Minitest::Test
     assert_equal 9, result
   end
 
+  def test_it_returns_the_greatest_gain_through_the_day_v3
+    arr = [15, 13, 4, 7, 6, 9]
+    result = @stock.get_best_profit(arr)
+    assert_equal 5, result
+  end
+
   def test_it_returns_the_smallest_loss_if_there_is_no_gain
     arr = [15, 13, 9, 7, 6, 4]
     result = @stock.get_best_profit(arr)
