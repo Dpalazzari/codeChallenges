@@ -18,4 +18,16 @@ class ReverseStringTest < Minitest::Test
     assert_equal 'akhsoobab', result
   end
 
+  def test_it_reverses_a_phrase_with_multiple_words
+    phrase = 'super babooshka'
+    result = @reverse.easy_method(phrase)
+    assert_equal 'akhsoobab repus', result
+  end
+
+  def test_it_reverses_a_string_with_special_characters
+    phrase = 'super babooshka!'
+    result = @reverse.easy_method(phrase)
+    assert_equal '!akhsoobab repus', result
+  end
+
 end
