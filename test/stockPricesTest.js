@@ -1,5 +1,5 @@
 const assert      = require('chai').assert;
-const stockPrices = require('../app').stockPrices;
+const stockPrices = require('../javascriptChallenges/stockPrices');
 
 
 describe('Stock Prices challenge', function(){

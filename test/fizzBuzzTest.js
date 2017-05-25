@@ -1,5 +1,5 @@
 const assert    = require('chai').assert;
-const fizzBuzz  = require('../app').fizzBuzz;
+const fizzBuzz  = require('../javascriptChallenges/fizzBuzz');
 
 describe('fizzBuzz challenge',function(){
   it('returns Fizz if divisible by 3', function(){

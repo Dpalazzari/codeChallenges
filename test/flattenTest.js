@@ -1,5 +1,5 @@
 const assert    = require('chai').assert;
-const flatten   = require('../app').flatten;
+const flatten   = require('../javascriptChallenges/flattenArray');
 
 describe('Flatten challenge', function(){
   it('flattens a simple nested array', function(){
