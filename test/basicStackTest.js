@@ -1,8 +1,8 @@
 const assert        = require('chai').assert;
-const removeElement = require('../app').removeElement;
-const countElement  = require('../app').countElement;
-const pushElement   = require('../app').pushElement;
-const maxElement    = require('../app').maxElement;
+const removeElement = require('../javascriptChallenges/basicStack').removeElement;
+const countElement  = require('../javascriptChallenges/basicStack').countElement;
+const pushElement   = require('../javascriptChallenges/basicStack').pushElement;
+const maxElement    = require('../javascriptChallenges/basicStack').maxElement;
 
 describe('Basic Stack Challenges', function(){
   context('Pop element out of array', function(){

@@ -1,5 +1,5 @@
 const assert       = require('chai').assert;
-const fibonacci    = require('../app').fibonacci;
+const fibonacci    = require('../javascriptChallenges/fibonacci');
 
 describe('Fibonacci', function(){
   it('returns the first two numbers of the fibonacci sequence', function(){

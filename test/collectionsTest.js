@@ -1,7 +1,7 @@
 const assert       = require('chai').assert;
-const findCapital  = require('../app').findCapital;
-const findState    = require('../app').findState;
-const Scrabble     = require('../app').scrabble;
+const findCapital  = require('../javascriptChallenges/collections').findCapital;
+const findState    = require('../javascriptChallenges/collections').findState;
+const Scrabble     = require('../javascriptChallenges/collections').scrabble;
 
 describe('Collections Challenge', function(){
   context('State and Capital tests', function(){
