@@ -36,6 +36,11 @@ class SuperFizzBuzzTest(unittest.TestCase):
     result = self.sfb.sequence(num)
     self.assertEqual(result, "SuperFizzBuzz")
 
+  def test_it_returns_the_number_if_not_divisible_by_7_3_or_5(self):
+    num = 4
+    result = self.sfb.sequence(num)
+    self.assertEqual(result, 4)
+
 unittest.main()
 
   
