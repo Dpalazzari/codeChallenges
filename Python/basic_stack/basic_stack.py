@@ -32,7 +32,6 @@ class BasicStack(object):
       num = arr.pop()
       if num > max_num:
         max_num = num
-
     return max_num
 
   def maximum_number_in_list_with_max(self, arr):
