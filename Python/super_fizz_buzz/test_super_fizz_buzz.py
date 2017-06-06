@@ -20,6 +20,22 @@ class SuperFizzBuzzTest(unittest.TestCase):
     num = 5
     result = self.sfb.sequence(num)
     self.assertEqual(result, 'Buzz')
+
+  def test_it_returns_super_fizz_when_divisible_by_7_and_3(self):
+    num = 21
+    result = self.sfb.sequence(num)
+    self.assertEqual(result, "SuperFizz")
+
+  def test_it_returns_fizz_buzz_when_divisible_by_3_and_5(self):
+    num = 15
+    result = self.sfb.sequence(num)
+    self.assertEqual(result, "FizzBuzz")
+
+  def test_it_returns_super_fizz_buzz_when_divisible_by_7_3_and_5(self):
+    num = 105
+    result = self.sfb.sequence(num)
+    self.assertEqual(result, "SuperFizzBuzz")
+
 unittest.main()
 
   
