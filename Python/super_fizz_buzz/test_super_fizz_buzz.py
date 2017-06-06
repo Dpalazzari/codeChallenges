@@ -10,6 +10,12 @@ class SuperFizzBuzzTest(unittest.TestCase):
     num = 7
     result = self.sfb.sequence(num)
     self.assertEqual(result, 'Super')
+
+  def test_it_returns_fizz_when_divisible_by_3(self):
+    num = 3
+    result = self.sfb.sequence(num)
+    self.assertEqual(result, 'Fizz')
+
 unittest.main()
 
   
