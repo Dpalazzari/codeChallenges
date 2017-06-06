@@ -1,4 +1,4 @@
-# Javascript,Ruby and Python Challenges
+# Javascript, Ruby and Python Challenges
 
 - A series of Ruby challenges practicing both raw Ruby and unit tests using minitest.
 - A series of javascript challenges practicing both raw JavaScript ability and unit tests using mocha/chai.
