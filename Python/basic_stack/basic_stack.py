@@ -12,3 +12,10 @@ class BasicStack(object):
   def remove_last_element(self, arr):
     arr = arr[0:-1]
     return arr
+
+  def remove_last_element_with_pop(self, arr):
+    arr.pop()
+    return arr
+
+  # def count_elements_in_list(self, arr):
+  #   return arr
