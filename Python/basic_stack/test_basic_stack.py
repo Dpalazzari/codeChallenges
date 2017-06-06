@@ -29,10 +29,10 @@ class BasicStackTestCase(unittest.TestCase):
     result = self.basic.remove_last_element_with_pop(array)
     self.assertEqual(result, [1,2,3,4])
 
-  # def test_it_can_count_the_number_of_objects_in_a_list(self):
-  #   array = [1,2,3,4,5]
-  #   result = self.basic.count_elements_in_list(array)
-  #   self.assertEqual(result, 5)
+  def test_it_can_count_the_number_of_objects_in_a_list(self):
+    array = [1,2,3,4,5]
+    result = self.basic.count_elements_in_list(array)
+    self.assertEqual(result, 5)
 
   
 

@@ -17,5 +17,8 @@ class BasicStack(object):
     arr.pop()
     return arr
 
-  # def count_elements_in_list(self, arr):
-  #   return arr
+  def count_elements_in_list(self, arr):
+    count = 0
+    for index in arr:
+      count += 1
+    return count
