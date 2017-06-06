@@ -1,5 +1,4 @@
 import unittest
-
 from basic_stack import BasicStack
 
 class BasicStackTestCase(unittest.TestCase):
