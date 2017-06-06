@@ -16,6 +16,10 @@ class SuperFizzBuzzTest(unittest.TestCase):
     result = self.sfb.sequence(num)
     self.assertEqual(result, 'Fizz')
 
+  def test_it_returns_buzz_when_divisible_by_5(self):
+    num = 5
+    result = self.sfb.sequence(num)
+    self.assertEqual(result, 'Buzz')
 unittest.main()
 
   
