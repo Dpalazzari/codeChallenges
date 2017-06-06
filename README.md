@@ -9,6 +9,8 @@
 
 - Will also be doing the challenges in Ruby to cement my Ruby knowledge.
 
+- Have begun to solve existing challenges in Python.
+
 ## Challenge Links
 
   - [SuperFizzBuzz](http://backend.turing.io/module1/student_homework/super_fizz)
