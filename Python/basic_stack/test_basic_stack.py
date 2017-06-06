@@ -34,6 +34,9 @@ class BasicStackTestCase(unittest.TestCase):
     result = self.basic.count_elements_in_list(array)
     self.assertEqual(result, 5)
 
-  
+  def test_it_can_count_the_elements_in_an_array_with_typical_python(self):
+    array = [1,2,3,4,5]
+    result = self.basic.count_elements_in_list_with_len(array)
+    self.assertEqual(result, 5)
 
 unittest.main()

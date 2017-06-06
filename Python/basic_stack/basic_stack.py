@@ -22,3 +22,6 @@ class BasicStack(object):
     for index in arr:
       count += 1
     return count
+
+  def count_elements_in_list_with_len(self, arr):
+    return len(arr)
