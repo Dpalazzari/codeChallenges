@@ -25,3 +25,15 @@ class BasicStack(object):
 
   def count_elements_in_list_with_len(self, arr):
     return len(arr)
+
+  def maximum_number_in_list(self, arr):
+    max_num = 0
+    while (len(arr) > 0):
+      num = arr.pop()
+      if num > max_num:
+        max_num = num
+
+    return max_num
+
+  def maximum_number_in_list_with_max(self, arr):
+    return max(arr)

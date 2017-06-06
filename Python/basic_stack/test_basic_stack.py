@@ -39,4 +39,14 @@ class BasicStackTestCase(unittest.TestCase):
     result = self.basic.count_elements_in_list_with_len(array)
     self.assertEqual(result, 5)
 
+  def test_it_can_find_the_max_number_in_a_list(self):
+    array = [2, 6, 18, 9, 3]
+    result = self.basic.maximum_number_in_list(array)
+    self.assertEqual(result, 18)
+
+  def test_it_can_return_max_num_with_built_in_python_method(self):
+    array = [2, 6, 18, 9, 3]
+    result = self.basic.maximum_number_in_list_with_max(array)
+    self.assertEqual(result, 18)
+
 unittest.main()
