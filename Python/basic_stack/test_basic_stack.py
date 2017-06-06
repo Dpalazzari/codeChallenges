@@ -24,7 +24,7 @@ class BasicStackTestCase(unittest.TestCase):
     result = self.basic.remove_last_element(array)
     self.assertEqual(result, [1,2,3,4])
 
-  def test_it_can_pop_last_element_from_array(self):
+  def test_it_can_pop_last_element_from_array_with_pop(self):
     array = [1,2,3,4,5]
     result = self.basic.remove_last_element_with_pop(array)
     self.assertEqual(result, [1,2,3,4])
