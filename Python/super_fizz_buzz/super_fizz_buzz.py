@@ -8,4 +8,6 @@ class SuperFizzBuzz:
       final_string = final_string + "Fizz"
     if num % 5 == 0:
       final_string = final_string + "Buzz"
+    if num % 7 != 0 and num % 3 != 0 and num % 5 != 0:
+      final_string = num
     return final_string
