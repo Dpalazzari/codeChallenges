@@ -26,4 +26,9 @@ class CollsTestCase(unittest.TestCase):
     result = self.collections.find_capital(state)
     self.assertEqual(result, "Denver")
 
+  def test_it_returns_unknown_if_the_state_is_not_in_initial_hash(self):
+    state = "Minnesota"
+    result = self.collections.find_capital(state)
+    self.assertEqual(result, "Unknown")
+
 unittest.main()
