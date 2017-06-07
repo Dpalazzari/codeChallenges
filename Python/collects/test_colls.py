@@ -21,4 +21,9 @@ class CollsTestCase(unittest.TestCase):
                               "Q":10, "R":1, "S":1, "T":1, "U":1, "V":4, "W":4, "X":8,
                               "Y":4, "Z":10})
 
+  def test_it_returns_the_capital_when_given_a_state(self):
+    state = "Colorado"
+    result = self.collections.find_capital(state)
+    self.assertEqual(result, "Denver")
+
 unittest.main()
