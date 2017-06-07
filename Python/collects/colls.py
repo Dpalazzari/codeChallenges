@@ -11,6 +11,8 @@ class Colls:
                           "Y":4, "Z":10}
 
   def find_capital(self, state):
-    state_abr = self.states[state]
-    capital   = self.capitals[state_abr] 
+    if state in self.states.keys():
+      capital   = self.capitals[self.states[state]]
+    if state not in self.states.keys():
+      capital = "Unknown"
     return capital
