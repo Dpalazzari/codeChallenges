@@ -9,3 +9,8 @@ class Colls:
                           "I":1, "J":8, "K":5, "L":1, "M":3, "N":1, "O":1, "P":3,
                           "Q":10, "R":1, "S":1, "T":1, "U":1, "V":4, "W":4, "X":8,
                           "Y":4, "Z":10}
+
+  def find_capital(self, state):
+    state_abr = self.states[state]
+    capital   = self.capitals[state_abr] 
+    return capital
