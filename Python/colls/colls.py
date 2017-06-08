@@ -1,6 +1,7 @@
 # Should be called 'collections' but that is a taken buzzword in Python
 from IPython import embed
 from scrabble_board import Scrabble
+from functools import reduce
 
 class Colls:
 
@@ -26,3 +27,10 @@ class Colls:
     for group in self.states.items():
       if group[1] == state_abr:
         return group[0]
+
+  def scrabble_score(self, word):
+    phrase = list(word.upper())
+    scores = []
+    for letter in phrase:
+      scores.append(self.scrabble_board[letter])
+    return reduce((lambda x , y: x + y), scores)
