@@ -35,4 +35,19 @@ class CollsTestCase(unittest.TestCase):
     result = self.collections.find_state(capital)
     self.assertEqual(result, 'Colorado')
 
+  def test_it_can_score_one_letter_in_scrabble(self):
+    letter = "H"
+    result = self.collections.scrabble_score(letter)
+    self.assertEqual(result, 4)
+
+  def test_it_can_score_an_entire_word_in_scrabble(self):
+    word = 'Hello'
+    result = self.collections.scrabble_score(word)
+    self.assertEqual(result, 8)
+
+  def test_it_can_score_another_word_in_scrabble(self):
+    word = 'Stephanie'
+    result = self.collections.scrabble_score(word)
+    self.assertEqual(result, 14)
+
 unittest.main()
