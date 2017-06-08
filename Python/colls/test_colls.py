@@ -30,4 +30,9 @@ class CollsTestCase(unittest.TestCase):
     result = self.collections.find_capital(state)
     self.assertEqual(result, "Unknown")
 
+  def test_it_returns_the_state_when_given_the_capital(self):
+    capital = 'Denver'
+    result = self.collections.find_state(capital)
+    self.assertEqual(result, 'Colorado')
+
 unittest.main()

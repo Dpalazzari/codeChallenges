@@ -15,3 +15,14 @@ class Colls:
     if state not in self.states.keys():
       capital = "Unknown"
     return capital
+
+  def find_state(self, capital):
+    for group in self.capitals.items():
+      if group[1] == capital:
+        state_abr = group[0]
+    return self.find_state_from_abbreviation(state_abr)
+
+  def find_state_from_abbreviation(self, state_abr):
+    for group in self.states.items():
+      if group[1] == state_abr:
+        return group[0]
