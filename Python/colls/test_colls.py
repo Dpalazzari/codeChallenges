@@ -45,4 +45,9 @@ class CollsTestCase(unittest.TestCase):
     result = self.collections.scrabble_score(word)
     self.assertEqual(result, 8)
 
+  def test_it_can_score_another_word_in_scrabble(self):
+    word = 'Stephanie'
+    result = self.collections.scrabble_score(word)
+    self.assertEqual(result, 14)
+
 unittest.main()

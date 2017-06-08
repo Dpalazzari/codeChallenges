@@ -33,4 +33,4 @@ class Colls:
     scores = []
     for letter in phrase:
       scores.append(self.scrabble_board[letter])
-    return reduce((lambda x , y: x + y), scores)
+    return reduce((lambda x , y : x + y), scores)
