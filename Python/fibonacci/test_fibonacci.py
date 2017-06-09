@@ -26,4 +26,5 @@ class FibonacciTestCase(unittest.TestCase):
     result = self.fibonacci.sequence(num)
     self.assertEqual(result, [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377])
 
-unittest.main()
+suite = unittest.TestLoader().loadTestsFromTestCase(FibonacciTestCase)
+unittest.TextTestRunner(verbosity=2).run(suite)
