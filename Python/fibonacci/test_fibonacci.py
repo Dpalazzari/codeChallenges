@@ -11,4 +11,14 @@ class FibonacciTestCase(unittest.TestCase):
     result = self.fibonacci.sequence(num)
     self.assertEqual(result, [0,1])
 
+  def test_it_returns_the_first_three_numbers_of_the_fibonacci_sequence(self):
+    num = 3
+    result = self.fibonacci.sequence(num)
+    self.assertEqual(result, [0,1,1])
+
+  def test_it_returns_the_first_four_numbers_of_the_fibonacci_sequence(self):
+    num = 4
+    result = self.fibonacci.sequence(num)
+    self.assertEqual(result, [0,1,1,2])
+
 unittest.main()
