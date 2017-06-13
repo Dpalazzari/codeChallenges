@@ -3,14 +3,18 @@ require 'pry-state'
 class Bubble
 
   def sort(arr)
-    index_count = arr.length - 1
-    (index_count).times do
-      arr.each_index do |index|
-        if arr[index] > arr[index+1]
-          arr[index], arr[index+1] = arr[index+1], arr[index]
+    index_count = arr.length
+    loop do
+      swapped = false
+      (index_count-1).times do |i|
+        if arr[i] > arr[i+1]
+          arr[i], arr[i+1] = arr[i+1], arr[i]
+          swapped = true
         end
       end
+      break if not swapped
     end
+    arr
   end
 
 end
